@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-f4-dl#d7-%27-jzrgk&af%0$+$gb8&uv0x&4=-&=dep+n24+ag
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1"]
 
 # Postgres config
 POSTGRES_USER=os.getenv('POSTGRES_USER')
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'authentication',
 ]
 
 MIDDLEWARE = [
