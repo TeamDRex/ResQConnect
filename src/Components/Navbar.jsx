@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`sticky z-20 top-0 w-[100%] bg-[#172b46] ${isSticky ? "shadow-lg  " : ""
+        className={`sticky z-20 top-0 w-full bg-[#172b46] ${isSticky ? "shadow-lg  " : ""
           }`}
       >
         <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 text-white">
@@ -91,13 +91,7 @@ const Navbar = () => {
               Contact
             </li>
 
-            <li
-              onClick={() => scrollToSection("register")}
-              className={`m-4 hover:text-[#5db363]  text-lg font-bold cursor-pointer ${activeSection === "register" ? "text-[#ffff]" : ""
-                }`}
-            >
-              Register
-            </li>
+            
 
           </ul>
           <div onClick={handleNav} className="block cursor-pointer md:hidden">
