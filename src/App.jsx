@@ -14,8 +14,7 @@ function App() {
   return (
    <>
 
-   <UpperNavbar/>
-
+  <UpperNavbar/>
   <Navbar />
   <br />
 
