@@ -1,4 +1,5 @@
 import React from 'react';
+import icon from '../assets/icon.png'
 
 function Footer() {
   return (
@@ -6,9 +7,9 @@ function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
-              {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="FlowBite Logo" /> */}
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ResQ-connect</span>
+            <a href="https://resqconnect.netlify.app/" className="flex items-center">
+             <div className='bg-transparent'> <img src={icon} className=" h-14 m-3 bg-red300 font-black" alt="Resqconnect" /> </div>
+              <span className="self-center text-2xl font-serif whitespace-nowrap dark:text-white">ResQ-Connect</span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -27,10 +28,10 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                  <a href="https://github.com/TeamDRex/ResQ-Connect" className="hover:underline ">Github</a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                  <a href="#" className="hover:underline">Discord</a>
                 </li>
               </ul>
             </div>
