@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-
+import icon from '../assets/icon.png'
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -52,7 +52,8 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 text-white">
-          <div className="m-4  text-white text-2xl">ResQ-Connect</div>
+        <img src={icon} className="  m-3 bg-red300 font-black" alt="Resqconnect" />
+          <div className="m-4  text-white text-2xl font-serif">ResQ-Connect</div>
 
           {/* <a href="#">
       
