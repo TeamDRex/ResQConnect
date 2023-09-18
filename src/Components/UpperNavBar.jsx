@@ -1,5 +1,6 @@
 import React from "react";
 import Search from '../assets/search.png'
+import Satyamev from '../assets/satyamev.jpg'
 
 const UpperNavbar =()=>{
 return(
@@ -8,7 +9,9 @@ return(
       <div className="container mx-auto flex justify-between items-center">
         {/* Left side logos */}
         <div className="flex items-center">
-          <img src="https://sih.gov.in/img1/SIH2023-logo.png" alt="Logo 1" className="h-20 mr-4" />
+          {/*Mobileview logo */}
+          <img src={Satyamev} className="h-20 w-20 mr-4 md:hidden" alt="" />
+          <img src="https://sih.gov.in/img1/SIH2023-logo.png" alt="Logo 1" className=" md:block hidden h-20 mr-4" />
           {/* <img src={logo2} alt="Logo 2" className="h-8" /> */}
         </div>
 
