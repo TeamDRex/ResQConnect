@@ -3,3 +3,4 @@ __pycache__/
 .vscode/
 .env
 docker-compose.yaml
+agency_logos/
