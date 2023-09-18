@@ -52,7 +52,7 @@ const Navbar = () => {
           }`}
       >
         <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 text-white">
-          <div className="m-4 text-white text-2xl">ResQconnect</div>
+          <div className="m-4  text-white text-2xl">ResQ-Connect</div>
 
           {/* <a href="#">
       
