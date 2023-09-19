@@ -1,1 +1,17 @@
+# Node.js
 node_modules/
+
+# Vite
+dist/
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Logs and debugging
+npm-debug.log
+yarn-error.log
