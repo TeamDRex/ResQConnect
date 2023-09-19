@@ -22,7 +22,7 @@ function App() {
 <Header />
  <Carousel /> 
  <div>
-  <h1 className=' text-2xl text-center  bg-green-500 p-1 m-4'>Resque Agencies</h1>
+  {/* <h1 className=' text-2xl text-center  bg-green-500 p-1 m-4'>Resque Agencies</h1> */}
 <Cards />
 <Cards />
 </div>
