@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import icon from '../assets/icon.png'
+import icon from '../assets/icon.png';
+
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -48,53 +49,13 @@ const Navbar = () => {
     <>
       <div
         className={`sticky z-20 top-0 w-full bg-[#172b46] ${
-          isSticky ? "shadow-lg  " : ""
+          isSticky ? "shadow-lg" : ""
         }`}
       >
         <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 text-white">
-        <img src={icon} className="  m-3 bg-red300 font-black" alt="Resqconnect" />
-          <div className="m-4  text-white text-2xl font-serif">ResQ-Connect</div>
+          <img src={icon} className="m-3 bg-red-300 font-black" alt="Resqconnect" />
+          <div className="m-4 text-white text-2xl font-serif">ResQ-Connect</div>
 
-          {/* <a href="#">
-      
-         
-            <img src={logo} className="w-44" alt="" />
-          </a> */}
-          <ul className="hidden text-white  -mt-2 md:flex">
-            <li
-              onClick={() => scrollToSection("home")}
-              className={`m-4 hover:rounded text-lg font-bold cursor-pointer ${
-                activeSection === "home" ? "text-[#ffff]" : ""
-              }`}
-            >
-              Home
-            </li>
-            <li
-              onClick={() => scrollToSection("about")}
-              className={`m-4 hover:text-[#5db363]  text-lg font-bold cursor-pointer ${
-                activeSection === "about" ? "text-[#ffff]" : ""
-              }`}
-            >
-              About
-            </li>
-            <li
-              onClick={() => scrollToSection("alerts")}
-              className={`m-4 hover:text-[#5db363]  text-lg font-bold cursor-pointer ${
-                activeSection === "alerts" ? "text-[#ffff]" : ""
-              }`}
-            >
-              Alerts
-            </li>
-
-            <li
-              onClick={() => scrollToSection("contact")}
-              className={`m-4 hover:text-[#5db363]  text-lg font-bold cursor-pointer ${
-                activeSection === "contact" ? "text-[#ffff]" : ""
-              }`}
-            >
-              Contact
-            </li>
-          </ul>
           <div onClick={handleNav} className="block cursor-pointer md:hidden">
             {nav ? (
               <AiOutlineClose fill="#fffff" size={20} />
@@ -105,66 +66,46 @@ const Navbar = () => {
           <div
             className={
               nav
-                ? "fixed z-30 left-0 top-0 pt-4 w-[60%] h-full border-r border-r-grey-900 bg-[#172b46] ease-in-out duration-500 "
+                ? "fixed z-30 left-0 top-0 pt-4 w-[90%] h-full border-r border-r-grey-900 bg-[#172b46] ease-in-out duration-500"
                 : "fixed left-[-100%]"
             }
           >
             <center>
-              {/* <img src={logo} className="w-44" alt="" /> */}
               <h1 className="m-4 text-white text-2xl">ResQconnect</h1>
             </center>
-            <ul className="uppercase p-4">
+            <ul className={`text-white -mt-2 ${size >= 360 ? "md:flex" : "md:hidden"}`}>
               <li
                 onClick={() => scrollToSection("home")}
-                className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                  activeSection === "home" ? "text-[#5db363]" : ""
+                className={`m-4 hover:rounded text-lg font-bold cursor-pointer ${
+                  activeSection === "home" ? "text-[#ffff]" : ""
                 }`}
               >
-                <span className="cursor-pointer"> Home</span>
+                Home
               </li>
               <li
                 onClick={() => scrollToSection("about")}
-                className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                  activeSection === "about" ? "text-[#5db363]" : ""
+                className={`m-4 hover:text-[#5db363] text-lg font-bold cursor-pointer ${
+                  activeSection === "about" ? "text-[#ffff]" : ""
                 }`}
               >
-                <span className="cursor-pointer">About</span>
+                About
               </li>
               <li
-                onClick={() => scrollToSection("register")}
-                className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                  activeSection === "register" ? "text-[#5db363]" : ""
+                onClick={() => scrollToSection("alerts")}
+                className={`m-4 hover:text-[#5db363] text-lg font-bold cursor-pointer ${
+                  activeSection === "alerts" ? "text-[#ffff]" : ""
                 }`}
               >
-                <span className="cursor-pointer">Alerts</span>
+                Alerts
               </li>
+
               <li
-                onClick={() => scrollToSection("schedule")}
-                className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                  activeSection === "schedule" ? "text-[#5db363]" : ""
+                onClick={() => scrollToSection("contact")}
+                className={`m-4 hover:text-[#5db363] text-lg font-bold cursor-pointer ${
+                  activeSection === "contact" ? "text-[#ffff]" : ""
                 }`}
               >
-                <span className="cursor-pointer">
-                  <a href="https://www.google.com/">Contact</a>
-                </span>
-              </li>
-              <li
-                onClick={() => scrollToSection("faq")}
-                className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                  activeSection === "faq" ? "text-[#5db363]" : ""
-                }`}
-              >
-                {/* <span className="cursor-pointer">Register</span> */}
-                <li
-                  onClick={() => scrollToSection("schedule")}
-                  className={`p-4 text-white font-bold text-lg   border-b border-gray-600 ${
-                    activeSection === "schedule" ? "text-[#5db363]" : ""
-                  }`}
-                >
-                  <span className="cursor-pointer">
-                    <a href="https://www.google.com">Contact</a>
-                  </span>
-                </li>
+                Contact
               </li>
             </ul>
           </div>
