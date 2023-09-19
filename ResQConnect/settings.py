@@ -30,34 +30,44 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*", "localhost", "127.0.0.1"]
 
-CORS_ALLOWED_ORIGINS=[
+CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
 ]
 
-CORS_ALLOW_CREDENTIALS=True
+CORS_ALLOW_CREDENTIALS = True
 
 # Postgres config
-POSTGRES_USER=os.getenv('POSTGRES_USER')
-POSTGRES_PASSWORD=os.getenv('POSTGRES_PASSWORD')
-POSTGRES_NAME=os.getenv('POSTGRES_NAME')
-POSTGRES_HOST=os.getenv('POSTGRES_HOST')
-POSTGRES_PORT=os.getenv('POSTGRES_PORT')
+POSTGRES_USER = os.getenv('POSTGRES_USER')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+POSTGRES_NAME = os.getenv('POSTGRES_NAME')
+POSTGRES_HOST = os.getenv('POSTGRES_HOST')
+POSTGRES_PORT = os.getenv('POSTGRES_PORT')
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
-    'authentication',
+]
+
+THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
 ]
+
+
+LOCAL_APPS = [
+    'api',
+    'authentication',
+]
+
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -93,13 +103,6 @@ WSGI_APPLICATION = 'ResQConnect.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -154,4 +157,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL='authentication.AppUser'
+AUTH_USER_MODEL = 'authentication.AppUser'
