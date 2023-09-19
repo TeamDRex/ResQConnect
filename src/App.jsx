@@ -1,36 +1,16 @@
-import React from 'react';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './Components/Navbar';
-import UpperNavbar from './Components/UpperNavBar'
-import Footer from './Components/Footer';
-import Carousel from './Components/Carousel'
-import Cards from './Components/Cards'
-import Header from './Components/Header'
-
-
-
 
 function App() {
-  
+  const [count, setCount] = useState(0)
 
   return (
-   <>
-
-  <UpperNavbar/>
-  <Navbar />
-  {/* <br /> */}
- <Header />
- <Carousel /> 
- 
-  {/* <h1 className=' text-2xl text-center  bg-green-500 p-1 m-4'>Resque Agencies</h1> */}
-<Cards />
-<Cards />
-
-
-
-  <Footer />
-   </>
+    <>
+      
+    </>
   )
 }
 
-export default App;
+export default App
