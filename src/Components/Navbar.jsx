@@ -5,16 +5,24 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-gray-400
+    <nav className="w-full bg-black
      shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="#">
-              {/* <h2 className="text-2xl font-bold">LOGO</h2> */}
+          <div className="flex flex-col items-center justify-between py-3 md:py-5 md:block">
+         
+            {/* <a href="#">      
+              <h2 className="text-2xl text-white font-bold">ResQConnect</h2>
             <img src={logo} alt="" />
 
             </a>
+           
+            <a className="text-white font-bold text-2xl" href="">ResQConnect</a> */}
+              <a href="#" className="flex items-center">
+              <img src={logo} className="h-8 mr-3" alt="FlowBite Logo" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ResQConnect</span>
+            </a>
+              
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -48,8 +56,10 @@ export default function NavBar() {
                       d="M4 6h16M4 12h16M4 18h16"
                     />
                   </svg>
+                  
                 )}
               </button>
+            
             </div>
           </div>
         </div>
@@ -60,18 +70,23 @@ export default function NavBar() {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-gray-600 hover:text-blue-600">
+            
+              <li className="text-white hover:text-blue-600">
                 <a href="#">Home</a>
               </li>
-              <li className="text-gray-600 hover:text-blue-600">
+              <li className="text-white hover:text-blue-600">
                 <a href="#">Blog</a>
               </li>
-              <li className="text-gray-600 hover:text-blue-600">
+              <li className="text-white hover:text-blue-600">
                 <a href="#">About US</a>
               </li>
-              <li className="text-gray-600 hover:text-blue-600">
+              <li className="text-white hover:text-blue-600">
                 <a href="#">Contact US</a>
               </li>
+              <li className="text-white hover:text-blue-600">
+                <a href="#">LogIn/SignUp</a>
+              </li>
+              
               
             </ul>
           </div>
