@@ -6,6 +6,7 @@ import Cards from './Components/Card'
 import Header from './Components/Heder'
 import Navbar from './Components/Navbar'
 import Faq from './Components/FAQ'
+import Maps from './Components/Maps'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     
     <Navbar />
     <Header />
+    <Maps />
   
     <Cards />
     <Faq/>
